@@ -1,0 +1,1673 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meshack Kibet | Full-Stack Developer & Cyber IT Services</title>
+
+  <meta
+    name="description"
+    content="Explore the portfolio of Meshack Kibet, a self-taught full-stack developer building KIVARO and business websites. Get cyber café, government online application, printing, computer support, website design and IT services."
+  >
+
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#14532d">
+
+  <!-- Add your portfolio's actual public URL here after deployment. -->
+  <!-- Do not use the KIVARO URL as the portfolio URL unless both share the same website. -->
+
+  <meta property="og:type" content="website">
+  <meta
+    property="og:title"
+    content="Meshack Kibet | Full-Stack Developer & IT Services"
+  >
+  <meta
+    property="og:description"
+    content="Software development, business websites, cyber café services and IT support."
+  >
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Main page additions. These styles complement style.css. */
+
+    :root {
+      --portfolio-green: #14532d;
+      --portfolio-green-dark: #103f24;
+      --portfolio-gold: #c49a27;
+      --portfolio-white: #ffffff;
+      --portfolio-soft: #f3f8f4;
+      --portfolio-text: #374151;
+      --portfolio-border: #dce7de;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--portfolio-text);
+      background: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      overflow-wrap: anywhere;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 76px 0;
+    }
+
+    .section-heading {
+      max-width: 780px;
+      margin: 0 auto 36px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      color: var(--portfolio-green);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.25;
+      margin: 8px 0 16px;
+    }
+
+    .section-label {
+      color: #9b7413;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-note {
+      color: #647067;
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      padding: 85px 0;
+      background: linear-gradient(135deg, #f3f8f4, #fff);
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      color: var(--portfolio-green);
+      font-size: clamp(2.3rem, 6vw, 4rem);
+      line-height: 1.12;
+      margin: 12px 0 20px;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.15rem, 3vw, 1.55rem);
+      color: #4b6352;
+      font-weight: 600;
+    }
+
+    .hero-photo {
+      width: min(100%, 360px);
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+      border: 6px solid #fff;
+      border-radius: 22px;
+      box-shadow: 0 12px 40px rgba(20, 83, 45, 0.15);
+      display: block;
+      margin: 0 auto;
+    }
+
+    .hero-actions,
+    .contact-actions,
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 46px;
+      padding: 11px 20px;
+      border: 2px solid var(--portfolio-green);
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: var(--portfolio-green);
+    }
+
+    .btn-primary:hover {
+      background: var(--portfolio-green-dark);
+    }
+
+    .btn-outline {
+      color: var(--portfolio-green);
+      background: #fff;
+    }
+
+    .btn-outline:hover {
+      background: var(--portfolio-soft);
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: start;
+    }
+
+    .content-card,
+    .project-card,
+    .skill-card,
+    .timeline-card {
+      padding: 25px;
+      border: 1px solid var(--portfolio-border);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 5px 18px rgba(20, 83, 45, 0.045);
+    }
+
+    .content-card h3,
+    .project-card h3,
+    .skill-card h3,
+    .timeline-card h3 {
+      margin-top: 0;
+      color: var(--portfolio-green);
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skill-list li {
+      padding: 6px 12px;
+      background: var(--portfolio-soft);
+      color: var(--portfolio-green);
+      border: 1px solid var(--portfolio-border);
+      border-radius: 30px;
+      font-size: 0.9rem;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .project-card .project-actions {
+      margin-top: auto;
+      padding-top: 12px;
+    }
+
+    .project-type {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 20px;
+      color: #72530b;
+      background: #fbf4dc;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .services-section {
+      background: #f8fbf8;
+    }
+
+    .service-dropdowns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      max-width: 1000px;
+      margin: 35px auto;
+      align-items: start;
+    }
+
+    .service-dropdown {
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--portfolio-border);
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(20, 83, 45, 0.05);
+      scroll-margin-top: 100px;
+    }
+
+    .service-dropdown summary {
+      position: relative;
+      padding: 19px 48px 19px 18px;
+      cursor: pointer;
+      list-style: none;
+      color: var(--portfolio-green);
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .service-dropdown summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .service-dropdown summary::after {
+      content: "+";
+      position: absolute;
+      right: 17px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #a78016;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    .service-dropdown[open] summary::after {
+      content: "−";
+    }
+
+    .service-dropdown summary:hover,
+    .service-dropdown[open] summary {
+      background: #edf6ef;
+    }
+
+    .service-dropdown summary:focus-visible {
+      outline: 3px solid var(--portfolio-gold);
+      outline-offset: -3px;
+    }
+
+    .dropdown-content {
+      padding: 12px 20px 22px;
+      border-top: 1px solid #e5ece6;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    .dropdown-content h4 {
+      margin: 17px 0 8px;
+      color: var(--portfolio-green);
+    }
+
+    .dropdown-content ul {
+      padding-left: 21px;
+      margin: 8px 0 17px;
+    }
+
+    .dropdown-content li {
+      margin-bottom: 7px;
+    }
+
+    .dropdown-content li::marker {
+      color: var(--portfolio-gold);
+    }
+
+    .service-note {
+      padding: 12px;
+      background: #f8f8f2;
+      border-left: 3px solid var(--portfolio-gold);
+      color: #5b665e;
+      font-size: 0.9rem;
+    }
+
+    .service-cta {
+      max-width: 900px;
+      margin: 38px auto 20px;
+      padding: 32px;
+      text-align: center;
+      background: #edf6ef;
+      border: 1px solid var(--portfolio-border);
+      border-radius: 16px;
+    }
+
+    .service-cta h3 {
+      margin-top: 0;
+      color: var(--portfolio-green);
+    }
+
+    .service-cta .btn {
+      margin: 5px;
+    }
+
+    .timeline-card {
+      border-top: 4px solid var(--portfolio-gold);
+    }
+
+    .contact-section {
+      color: var(--portfolio-text);
+      background: #f3f8f4;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .contact-card {
+      padding: 28px;
+      background: #fff;
+      border: 1px solid var(--portfolio-border);
+      border-radius: 14px;
+    }
+
+    .contact-card h3 {
+      color: var(--portfolio-green);
+    }
+
+    .contact-link {
+      color: var(--portfolio-green);
+      font-weight: 700;
+    }
+
+    .site-footer {
+      padding: 28px 0;
+      text-align: center;
+      color: #eaf4ec;
+      background: var(--portfolio-green-dark);
+    }
+
+    .site-footer p {
+      margin: 6px 0;
+    }
+
+    .site-footer a {
+      color: #fff;
+    }
+
+    .back-to-top {
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 760px) {
+      .section {
+        padding: 55px 0;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .hero-layout,
+      .about-layout,
+      .skills-grid,
+      .projects-grid,
+      .timeline-grid,
+      .contact-layout,
+      .service-dropdowns {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-layout {
+        gap: 30px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-actions,
+      .contact-actions,
+      .project-actions {
+        justify-content: center;
+      }
+
+      .hero-photo {
+        width: min(82%, 300px);
+      }
+
+      .service-cta {
+        padding: 24px 16px;
+      }
+
+      .service-cta .btn {
+        display: flex;
+        width: 100%;
+        margin: 10px 0;
+        box-sizing: border-box;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="#top" aria-label="Meshack Kibet home">
+        <span>Meshack</span> Kibet
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        ☰
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">My Story</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#services">Cyber Services</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-layout">
+
+        <div class="hero-content">
+          <p class="section-label">WELCOME TO MY PORTFOLIO</p>
+
+          <h1>Meshack Kibet</h1>
+
+          <h2>Full-Stack Developer | IT Support | Cyber Services</h2>
+
+          <p>
+            I am a self-taught developer passionate about building practical
+            digital solutions that help businesses grow. I develop websites
+            and business software, including KIVARO, and provide computer,
+            online application and IT support services.
+          </p>
+
+          <p>
+            My goal is to keep learning, create useful technology and make
+            digital services more accessible to individuals and businesses.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore My Projects</a>
+            <a class="btn btn-outline" href="#contact">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            class="hero-photo"
+            src="software%20engineer.jpeg"
+            alt="Portrait of Meshack Kibet, full-stack developer"
+            width="360"
+            height="450"
+            fetchpriority="high"
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT / PERSONAL STORY -->
+    <section class="section" id="about">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">MY JOURNEY</p>
+          <h2>My Story: Learning, Building and Growing</h2>
+          <p>
+            My journey into technology began with curiosity, determination
+            and a desire to solve real-world problems.
+          </p>
+        </div>
+
+        <div class="about-layout">
+
+          <article class="content-card">
+            <h3>Where My Journey Began</h3>
+
+            <p>
+              I attended Ndanai Primary School before joining Boito Boys
+              for my secondary education. During secondary school, I was
+              supported by the Equity Elimu Scholarship, which helped me
+              continue my education.
+            </p>
+
+            <p>
+              Computer Studies became one of my favourite subjects. I enjoyed
+              learning how computers work, helping fellow students understand
+              computer topics and participating in computer-related projects.
+            </p>
+
+            <p>
+              Those experiences encouraged me to pursue technology beyond
+              the classroom.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h3>From Cyber Café Work to Software Development</h3>
+
+            <p>
+              During school holidays, I gained practical experience working
+              at Beetech Cyber and later SkyNet Cyber. These opportunities
+              exposed me to customer service, computer use, online services
+              and everyday technology challenges.
+            </p>
+
+            <p>
+              After moving to Sotik, I continued working on projects while
+              facing financial challenges that made college difficult to
+              pursue at the time.
+            </p>
+
+            <p>
+              Instead of giving up on my goal, I chose self-directed learning.
+              I began developing my programming skills and building real
+              projects that could demonstrate what I was learning.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h3>Building Solutions for Real Businesses</h3>
+
+            <p>
+              I developed a website for PrimeNest Company and started building
+              KIVARO, a business management platform designed to help businesses
+              manage their operations digitally.
+            </p>
+
+            <p>
+              These projects continue to help me learn software architecture,
+              frontend development, backend APIs, databases, deployment and
+              the practical work involved in maintaining software.
+            </p>
+          </article>
+
+          <article class="content-card">
+            <h3>My Vision</h3>
+
+            <p>
+              I want to become a skilled software engineer, develop reliable
+              digital products and help businesses use technology effectively.
+            </p>
+
+            <p>
+              I am also looking for legitimate educational opportunities,
+              scholarships or sponsorship that could help me pursue formal
+              studies in Software Engineering or Information Technology.
+            </p>
+
+            <p>
+              I believe that consistent learning, practical experience and
+              persistence can create opportunities for the future.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">WHAT I AM LEARNING AND BUILDING</p>
+          <h2>My Technical Skills</h2>
+          <p>
+            My skills continue to grow through hands-on development,
+            self-study and practical projects.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+
+          <article class="skill-card">
+            <h3>Frontend Development</h3>
+            <ul class="skill-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Responsive Design</li>
+              <li>Progressive Web Apps</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3>Backend Development</h3>
+            <ul class="skill-list">
+              <li>Node.js</li>
+              <li>Fastify</li>
+              <li>TypeScript</li>
+              <li>REST APIs</li>
+              <li>Authentication</li>
+              <li>API Integration</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3>Databases & Deployment</h3>
+            <ul class="skill-list">
+              <li>PostgreSQL</li>
+              <li>Prisma ORM</li>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Vercel</li>
+              <li>Render</li>
+            </ul>
+          </article>
+
+          <article class="skill-card">
+            <h3>IT & Digital Services</h3>
+            <ul class="skill-list">
+              <li>Computer Support</li>
+              <li>Document Preparation</li>
+              <li>Online Applications</li>
+              <li>Website Maintenance</li>
+              <li>Digital Security Awareness</li>
+              <li>Customer Support</li>
+            </ul>
+          </article>
+
+        </div>
+
+        <p class="section-note">
+          This list describes technologies and service areas I work with
+          and continue to develop. Specific services depend on the task
+          and the tools available.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">MY WORK</p>
+          <h2>Projects I Have Built</h2>
+          <p>
+            Practical projects that demonstrate my interest in software
+            development and digital business solutions.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <span class="project-type">Business Management SaaS</span>
+            <h3>KIVARO Business Management</h3>
+
+            <p>
+              KIVARO is a business management platform I am developing to
+              help businesses manage their daily operations through digital
+              tools. The project includes business-specific workspaces,
+              authentication, management modules and AI-powered business
+              insights.
+            </p>
+
+            <p>
+              Technologies include React, TypeScript, Fastify, Prisma and
+              PostgreSQL, with deployment services for the frontend and API.
+            </p>
+
+            <div class="project-actions">
+              <a
+                class="btn btn-primary"
+                href="https://kivaro.co.ke/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit KIVARO
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <span class="project-type">Company Website</span>
+            <h3>PrimeNest Company</h3>
+
+            <p>
+              I built a website for PrimeNest Company to establish its online
+              presence and provide visitors with information about the company.
+            </p>
+
+            <p>
+              This project gave me practical experience in presenting business
+              information online and developing a website for a real-world use.
+            </p>
+
+            <div class="project-actions">
+              <a
+                class="btn btn-primary"
+                href="https://primenestcompany.co.ke/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Visit PrimeNest
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <span class="project-type">Personal Development</span>
+            <h3>Developer Portfolio</h3>
+
+            <p>
+              This portfolio presents my background, skills, projects,
+              IT services and professional goals in one place.
+            </p>
+
+            <p>
+              It is designed to help potential clients, employers,
+              collaborators and educational sponsors learn about my work.
+            </p>
+
+            <div class="project-actions">
+              <a class="btn btn-outline" href="#contact">Discuss a Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <span class="project-type">IT & Customer Support</span>
+            <h3>Cyber Café & IT Services</h3>
+
+            <p>
+              My cyber café and IT service areas include online application
+              assistance, document services, computer support, digital
+              account security and website development.
+            </p>
+
+            <p>
+              The services below are organized into expandable categories
+              to help customers find the assistance they need.
+            </p>
+
+            <div class="project-actions">
+              <a class="btn btn-outline" href="#services">Explore Services</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CYBER CAFÉ & IT SERVICES -->
+    <section class="section services-section" id="services">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">CYBER CAFÉ & IT SUPPORT</p>
+          <h2>Complete Cyber Café & IT Services</h2>
+
+          <p>
+            Government online services, tax assistance, education applications,
+            printing, computer support, mobile phone assistance, website
+            development and digital security guidance.
+          </p>
+
+          <p>
+            Select a category below to see the services offered.
+          </p>
+        </div>
+
+        <div class="service-dropdowns">
+
+          <!-- 1 -->
+          <details class="service-dropdown">
+            <summary>1. Government Online Services</summary>
+            <div class="dropdown-content">
+
+              <h4>eCitizen Services</h4>
+              <ul>
+                <li>eCitizen account registration and access assistance</li>
+                <li>Government service application assistance</li>
+                <li>Government fee payment guidance</li>
+                <li>Application status checking</li>
+                <li>Downloading available government documents</li>
+                <li>Account information updates where permitted</li>
+              </ul>
+
+              <h4>National ID Services</h4>
+              <ul>
+                <li>National ID application guidance</li>
+                <li>Lost or damaged ID replacement guidance</li>
+                <li>ID application status assistance</li>
+                <li>Application document preparation</li>
+              </ul>
+
+              <h4>Passport & Immigration</h4>
+              <ul>
+                <li>Passport applications and renewals</li>
+                <li>Lost passport replacement guidance</li>
+                <li>Passport appointment assistance</li>
+                <li>Application status checking</li>
+              </ul>
+
+              <h4>Birth & Death Registration</h4>
+              <ul>
+                <li>Birth certificate application guidance</li>
+                <li>Birth certificate replacement guidance</li>
+                <li>Death certificate application guidance</li>
+                <li>Civil registration document preparation</li>
+              </ul>
+
+              <h4>Certificate of Good Conduct</h4>
+              <ul>
+                <li>Application guidance</li>
+                <li>Fingerprint appointment guidance</li>
+                <li>Application status checking</li>
+                <li>Downloading available certificates</li>
+              </ul>
+
+              <h4>NTSA Services</h4>
+              <ul>
+                <li>NTSA account assistance</li>
+                <li>Driving licence application and renewal guidance</li>
+                <li>Vehicle registration and transfer guidance</li>
+                <li>Vehicle inspection booking assistance</li>
+                <li>TIMS and eCitizen portal navigation</li>
+              </ul>
+
+              <h4>Other Government Services</h4>
+              <ul>
+                <li>County government online services</li>
+                <li>Business permit application guidance</li>
+                <li>Official government forms</li>
+                <li>Public service application assistance</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 2 -->
+          <details class="service-dropdown">
+            <summary>2. KRA & Tax Services</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>KRA PIN registration assistance</li>
+                <li>KRA PIN certificate downloads</li>
+                <li>KRA PIN retrieval guidance</li>
+                <li>PIN information update guidance</li>
+                <li>Individual income tax return filing assistance</li>
+                <li>Nil return filing assistance where applicable</li>
+                <li>Employment income tax return assistance</li>
+                <li>Tax Compliance Certificate application guidance</li>
+                <li>Tax compliance status checking</li>
+                <li>Turnover tax filing assistance where applicable</li>
+                <li>VAT and withholding tax filing assistance where applicable</li>
+                <li>Tax payment guidance</li>
+                <li>iTax navigation and document downloads</li>
+                <li>KRA notices and tax document assistance</li>
+              </ul>
+              <p class="service-note">
+                Tax filings must use accurate information supplied and
+                authorized by the taxpayer. Approval and compliance depend
+                on the relevant tax authority.
+              </p>
+            </div>
+          </details>
+
+          <!-- 3 -->
+          <details class="service-dropdown">
+            <summary>3. HELB & Higher Education Funding</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>HELB account registration assistance</li>
+                <li>Student loan application guidance</li>
+                <li>Loan application form assistance</li>
+                <li>Scholarship application guidance</li>
+                <li>Loan status and allocation information assistance</li>
+                <li>Loan repayment statement guidance</li>
+                <li>Compliance certificate application guidance</li>
+                <li>HELB portal troubleshooting</li>
+                <li>Higher Education Funding application guidance</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 4 -->
+          <details class="service-dropdown">
+            <summary>4. KUCCPS & Education Services</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>KUCCPS account assistance</li>
+                <li>University and college course selection guidance</li>
+                <li>Placement and course revision assistance</li>
+                <li>Placement status checking</li>
+                <li>TVET college applications</li>
+                <li>Course requirements research</li>
+                <li>University admission applications</li>
+                <li>Student portal registration</li>
+                <li>School registration assistance</li>
+                <li>Scholarship and education funding applications</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 5 -->
+          <details class="service-dropdown">
+            <summary>5. SHA & Health Online Services</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>SHA account registration assistance</li>
+                <li>Account access and troubleshooting</li>
+                <li>Member information update guidance</li>
+                <li>Dependant registration guidance</li>
+                <li>Membership status checking</li>
+                <li>Official portal navigation</li>
+                <li>Online registration requirements guidance</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 6 -->
+          <details class="service-dropdown">
+            <summary>6. Job Applications & Recruitment</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Online job application assistance</li>
+                <li>Government and county job applications</li>
+                <li>Public Service Commission application guidance</li>
+                <li>CV and resume writing</li>
+                <li>Cover letters and application letters</li>
+                <li>Professional document formatting</li>
+                <li>Emailing job applications</li>
+                <li>Online interview preparation</li>
+                <li>LinkedIn profile setup assistance</li>
+                <li>Job vacancy research</li>
+                <li>Document scanning and uploading</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 7 -->
+          <details class="service-dropdown">
+            <summary>7. Business Registration & Business Services</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Business name and company registration guidance</li>
+                <li>Business registration document downloads</li>
+                <li>Business permit application assistance</li>
+                <li>Business profile preparation</li>
+                <li>Business email setup</li>
+                <li>Document typing and formatting</li>
+                <li>Invoices, quotations and receipt templates</li>
+                <li>Business plans and proposals</li>
+                <li>Tender document formatting and application assistance</li>
+                <li>Supplier registration and AGPO application guidance</li>
+                <li>Tax registration assistance</li>
+                <li>Domain registration and hosting setup guidance</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 8 -->
+          <details class="service-dropdown">
+            <summary>8. Land & Property Online Services</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Official land search application guidance</li>
+                <li>Land record search assistance where available</li>
+                <li>Land-related application form assistance</li>
+                <li>Property document scanning</li>
+                <li>Document uploading assistance</li>
+                <li>Official land portal navigation</li>
+                <li>Application status checking where available</li>
+                <li>Survey and property record service guidance</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 9 -->
+          <details class="service-dropdown">
+            <summary>9. Police, Court & Legal Documents</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Good Conduct application guidance</li>
+                <li>Online police portal assistance</li>
+                <li>Court service portal navigation</li>
+                <li>Online case information access where available</li>
+                <li>Legal document typing</li>
+                <li>Affidavit typing from customer-provided information</li>
+                <li>Statutory declaration formatting</li>
+                <li>Document scanning, printing and form preparation</li>
+              </ul>
+              <p class="service-note">
+                Legal advice, certification, witnessing and commissioning
+                require appropriately qualified or authorized professionals.
+              </p>
+            </div>
+          </details>
+
+          <!-- 10 -->
+          <details class="service-dropdown">
+            <summary>10. Printing, Photocopying & Documents</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Black-and-white and colour printing</li>
+                <li>Photocopying and scanning</li>
+                <li>Lamination and document binding</li>
+                <li>Passport-size photo printing</li>
+                <li>Document resizing and formatting</li>
+                <li>PDF printing, merging and splitting</li>
+                <li>PDF-to-Word and Word-to-PDF conversion</li>
+                <li>Document compression</li>
+                <li>Typing handwritten documents</li>
+                <li>Form filling and email document printing</li>
+                <li>File transfer to flash disks</li>
+                <li>Bulk printing and document organization</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 11 -->
+          <details class="service-dropdown">
+            <summary>11. Academic & Student Services</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Assignment typing and formatting</li>
+                <li>Project report formatting</li>
+                <li>Research document and thesis formatting</li>
+                <li>Table of contents and bibliography formatting</li>
+                <li>PowerPoint presentation preparation</li>
+                <li>Spreadsheet preparation</li>
+                <li>Academic CV preparation</li>
+                <li>Examination registration assistance</li>
+                <li>School and college admission applications</li>
+                <li>Student portal assistance</li>
+                <li>KCSE result access guidance where officially available</li>
+                <li>KNEC service and certificate replacement guidance</li>
+                <li>Scholarship application assistance</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 12 -->
+          <details class="service-dropdown">
+            <summary>12. Computer & Laptop Services</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Windows installation and reinstallation</li>
+                <li>Windows configuration and setup</li>
+                <li>Legitimate Windows activation assistance</li>
+                <li>Driver and software installation</li>
+                <li>Operating system updates</li>
+                <li>Computer formatting and troubleshooting</li>
+                <li>Laptop performance optimization</li>
+                <li>Slow computer and startup problem diagnosis</li>
+                <li>Blue screen error troubleshooting</li>
+                <li>Printer installation</li>
+                <li>Microsoft Office setup</li>
+                <li>File management, backup and restoration</li>
+                <li>Computer maintenance and application troubleshooting</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 13 -->
+          <details class="service-dropdown">
+            <summary>13. Virus Removal & Malware Protection</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Computer virus and malware removal</li>
+                <li>Spyware and adware removal</li>
+                <li>Browser hijacker removal</li>
+                <li>Suspicious program investigation</li>
+                <li>Antivirus installation and configuration</li>
+                <li>Malware scanning and security updates</li>
+                <li>Browser security configuration</li>
+                <li>Ransomware incident assistance</li>
+                <li>Computer security assessment</li>
+                <li>Data protection and infection prevention advice</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 14 -->
+          <details class="service-dropdown">
+            <summary>14. Mobile Phone Services</summary>
+            <div class="dropdown-content">
+
+              <h4>Android Phone Support</h4>
+              <ul>
+                <li>Software troubleshooting and updates</li>
+                <li>Application installation and configuration</li>
+                <li>Phone performance and storage optimization</li>
+                <li>Phone backup and restoration</li>
+                <li>Email and Google account recovery guidance</li>
+                <li>Suspicious application checks and removal</li>
+                <li>Phone security configuration</li>
+                <li>File transfer between phone and computer</li>
+              </ul>
+
+              <h4>iPhone Support</h4>
+              <ul>
+                <li>iOS update assistance</li>
+                <li>Apple account recovery guidance</li>
+                <li>iCloud setup assistance</li>
+                <li>iPhone backup and restoration guidance</li>
+                <li>Application configuration and storage management</li>
+                <li>Device security checks</li>
+                <li>Photo and file transfer assistance</li>
+              </ul>
+
+              <p class="service-note">
+                Device unlocking, account recovery and reset services are
+                subject to ownership verification and official security
+                restrictions.
+              </p>
+            </div>
+          </details>
+
+          <!-- 15 -->
+          <details class="service-dropdown">
+            <summary>15. Hacked Account Recovery & Cybersecurity</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Facebook and Instagram account recovery guidance</li>
+                <li>TikTok account recovery assistance</li>
+                <li>WhatsApp account security assistance</li>
+                <li>Gmail, Google and Microsoft account recovery guidance</li>
+                <li>Password reset assistance</li>
+                <li>Compromised email account security</li>
+                <li>Suspicious login investigation</li>
+                <li>Unauthorized account access response</li>
+                <li>Two-factor authentication setup</li>
+                <li>Privacy settings configuration</li>
+                <li>Recovery email and phone number update guidance</li>
+                <li>Security notifications and post-hack protection</li>
+              </ul>
+
+              <p class="service-note">
+                Assistance is limited to accounts owned by the customer or
+                accounts for which explicit authorization is provided.
+                Recovery depends on the platform's official procedures.
+              </p>
+            </div>
+          </details>
+
+          <!-- 16 -->
+          <details class="service-dropdown">
+            <summary>16. Ethical Hacking & Digital Security</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Basic website security assessments</li>
+                <li>Authorized vulnerability assessments</li>
+                <li>Website configuration reviews</li>
+                <li>Network and Wi-Fi security assessments</li>
+                <li>Security awareness and phishing prevention</li>
+                <li>Password security guidance</li>
+                <li>Device security checks</li>
+                <li>Basic server security configuration guidance</li>
+                <li>Security patching guidance</li>
+                <li>Incident response assistance</li>
+                <li>Digital security consultation</li>
+              </ul>
+
+              <p class="service-note">
+                Security testing requires the system owner's permission
+                and must remain within the agreed scope.
+              </p>
+            </div>
+          </details>
+
+          <!-- 17 -->
+          <details class="service-dropdown">
+            <summary>17. Data Recovery & Storage Services</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Data backup and file restoration assistance</li>
+                <li>Deleted file recovery assessment</li>
+                <li>Flash disk and memory card troubleshooting</li>
+                <li>External hard drive troubleshooting</li>
+                <li>Phone-to-computer file transfer</li>
+                <li>Computer-to-computer data transfer</li>
+                <li>Google Drive and OneDrive setup</li>
+                <li>Cloud storage configuration</li>
+                <li>File organization and data migration</li>
+              </ul>
+
+              <p class="service-note">
+                Recovery success depends on the device condition and whether
+                the data has been overwritten.
+              </p>
+            </div>
+          </details>
+
+          <!-- 18 -->
+          <details class="service-dropdown">
+            <summary>18. Internet, Wi-Fi & Network Services</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Wi-Fi setup and troubleshooting</li>
+                <li>Router configuration</li>
+                <li>Internet connectivity troubleshooting</li>
+                <li>Printer network configuration</li>
+                <li>Computer network setup</li>
+                <li>Home network security</li>
+                <li>Small office network configuration</li>
+                <li>Network password change assistance</li>
+                <li>Basic network performance troubleshooting</li>
+                <li>Device connectivity troubleshooting</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 19 -->
+          <details class="service-dropdown">
+            <summary>19. Website Design & Digital Services</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Business website design</li>
+                <li>Personal portfolio websites</li>
+                <li>Small business website development</li>
+                <li>Website updates and maintenance</li>
+                <li>Domain registration and web hosting guidance</li>
+                <li>Website content writing</li>
+                <li>Website security and backup assistance</li>
+                <li>Business email configuration</li>
+                <li>Contact form setup</li>
+                <li>Basic search engine optimization</li>
+                <li>Website troubleshooting</li>
+                <li>Social media business page setup</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 20 -->
+          <details class="service-dropdown">
+            <summary>20. Email & Online Account Services</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Email account setup guidance</li>
+                <li>Gmail and Outlook configuration</li>
+                <li>Email password recovery guidance</li>
+                <li>Email signature creation</li>
+                <li>Email attachments and troubleshooting</li>
+                <li>Spam and phishing awareness</li>
+                <li>Email security configuration</li>
+                <li>Contact management</li>
+                <li>Account recovery information update guidance</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 21 -->
+          <details class="service-dropdown">
+            <summary>21. Design & Digital Document Creation</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Business cards, posters and flyers</li>
+                <li>Certificates and invitations</li>
+                <li>Brochures and letterheads</li>
+                <li>Business profiles</li>
+                <li>Menus and price lists</li>
+                <li>Logos and basic branding</li>
+                <li>Social media graphics and advertisements</li>
+                <li>CV and invoice templates</li>
+                <li>Document layouts and presentation slides</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 22 -->
+          <details class="service-dropdown">
+            <summary>22. Internet & General Online Services</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Online form filling and registration assistance</li>
+                <li>Email sending</li>
+                <li>Online research</li>
+                <li>Document downloading and uploading</li>
+                <li>Online appointment booking</li>
+                <li>Online payment guidance</li>
+                <li>File conversion</li>
+                <li>Account registration assistance</li>
+                <li>Online shopping assistance</li>
+                <li>Travel booking assistance</li>
+                <li>Application tracking</li>
+                <li>Digital document submission</li>
+              </ul>
+            </div>
+          </details>
+
+          <!-- 23 -->
+          <details class="service-dropdown">
+            <summary>23. Other Digital Services & Computer Training</summary>
+            <div class="dropdown-content">
+              <ul>
+                <li>Software troubleshooting</li>
+                <li>Computer lessons for beginners</li>
+                <li>Basic computer training</li>
+                <li>Internet and smartphone usage training</li>
+                <li>Digital literacy training</li>
+                <li>Online privacy education</li>
+                <li>File organization and management</li>
+                <li>Cloud account setup</li>
+                <li>Data transfer assistance</li>
+                <li>Technology consultation</li>
+                <li>Small business IT support</li>
+              </ul>
+            </div>
+          </details>
+
+        </div>
+
+        <div class="service-cta">
+          <h3>How Can We Help You Today?</h3>
+
+          <p>
+            Contact us about government online applications, KRA services,
+            education applications, printing, computer support, phone
+            assistance, website development or digital security.
+          </p>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/254702515408"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp: 0702 515 408
+          </a>
+
+          <a class="btn btn-outline" href="tel:+254702515408">
+            Call Us
+          </a>
+
+          <a
+            class="btn btn-outline"
+            href="mailto:meshackkibet252@gmail.com?subject=Cyber%20and%20IT%20Services%20Inquiry"
+          >
+            Send an Email
+          </a>
+        </div>
+
+        <p class="section-note">
+          Government requirements, fees and procedures may change. Services
+          depend on eligibility and official portal availability. Customers
+          must provide accurate information and authorize actions taken on
+          their behalf. We do not guarantee government approvals, account
+          recovery or data recovery.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION & SPONSORSHIP -->
+    <section class="section" id="education">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">MY NEXT CHAPTER</p>
+          <h2>Education, Growth & Sponsorship</h2>
+
+          <p>
+            I am committed to improving my technical knowledge and pursuing
+            opportunities that can help me become a professional software engineer.
+          </p>
+        </div>
+
+        <div class="timeline-grid">
+
+          <article class="timeline-card">
+            <h3>My Educational Foundation</h3>
+            <p>
+              I completed primary education at Ndanai Primary School and
+              attended Boito Boys for secondary education. The Equity Elimu
+              Scholarship supported my secondary education journey.
+            </p>
+          </article>
+
+          <article class="timeline-card">
+            <h3>Self-Directed Technical Learning</h3>
+            <p>
+              I continue learning web development, frontend frameworks,
+              backend development, databases, software deployment and
+              practical application development through self-study and projects.
+            </p>
+          </article>
+
+          <article class="timeline-card">
+            <h3>My Study Goal</h3>
+            <p>
+              I hope to pursue formal training in Software Engineering,
+              Computer Science or Information Technology through a suitable
+              college, university, scholarship or sponsorship opportunity.
+            </p>
+          </article>
+
+          <article class="timeline-card">
+            <h3>Opportunities & Collaboration</h3>
+            <p>
+              I welcome legitimate educational sponsorship leads, mentorship,
+              development collaboration and opportunities to work on useful
+              software projects.
+            </p>
+            <a class="btn btn-outline" href="#contact">Get in Touch</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="section-label">LET'S CONNECT</p>
+          <h2>Contact Me</h2>
+          <p>
+            Need a website, business software, cyber café service or IT support?
+            Contact me to discuss your requirements.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+
+          <div class="contact-card">
+            <h3>Business & Project Inquiries</h3>
+
+            <p>
+              I am open to discussing website development, business management
+              solutions, IT support, digital services and software projects.
+            </p>
+
+            <p>
+              <strong>Phone:</strong>
+              <a class="contact-link" href="tel:+254702515408">
+                +254 702 515 408
+              </a>
+            </p>
+
+            <p>
+              <strong>WhatsApp:</strong>
+              <a
+                class="contact-link"
+                href="https://wa.me/254702515408"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chat on WhatsApp
+              </a>
+            </p>
+
+            <p>
+              <strong>Email:</strong>
+              <a
+                class="contact-link"
+                href="mailto:meshackkibet252@gmail.com"
+              >
+                meshackkibet252@gmail.com
+              </a>
+            </p>
+
+            <div class="contact-actions">
+              <a
+                class="btn btn-primary"
+                href="https://wa.me/254702515408?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Start a WhatsApp Chat
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <h3>Education & Sponsorship Inquiries</h3>
+
+            <p>
+              I welcome information about legitimate scholarships, Software
+              Engineering and IT courses, mentorship programmes and educational
+              sponsorship opportunities.
+            </p>
+
+            <p>
+              I am also interested in connecting with developers, technology
+              professionals and organizations that support practical learning
+              and digital innovation.
+            </p>
+
+            <a
+              class="btn btn-outline"
+              href="mailto:meshackkibet252@gmail.com?subject=Education%20or%20Sponsorship%20Opportunity"
+            >
+              Discuss an Opportunity
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <p>
+        <strong>Meshack Kibet</strong> — Full-Stack Developer & IT Services
+      </p>
+
+      <p>
+        Building practical digital solutions through learning, creativity
+        and technology.
+      </p>
+
+      <p>
+        &copy; <span id="current-year"></span> Meshack Kibet.
+        All rights reserved.
+      </p>
+
+      <a class="back-to-top" href="#top">Back to top ↑</a>
+
+    </div>
+  </footer>
+
+  <!-- BASIC NAVIGATION AND FOOTER SCRIPT -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const yearElement = document.getElementById("current-year");
+
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
+          const isOpen = navLinks.classList.toggle("active");
+
+          menuToggle.setAttribute("aria-expanded", String(isOpen));
+          menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+          );
+        });
+
+        navLinks.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            navLinks.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation menu");
+          });
+        });
+      }
+
+      /*
+       * Dropdowns work natively without JavaScript.
+       * This optional behaviour closes other categories when one is opened.
+       */
+      const serviceDropdowns = document.querySelectorAll(".service-dropdown");
+
+      serviceDropdowns.forEach(function (dropdown) {
+        dropdown.addEventListener("toggle", function () {
+          if (dropdown.open) {
+            serviceDropdowns.forEach(function (otherDropdown) {
+              if (otherDropdown !== dropdown) {
+                otherDropdown.open = false;
+              }
+            });
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
